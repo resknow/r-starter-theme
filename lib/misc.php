@@ -23,13 +23,10 @@ function dd($input)
 
 // Add Google Maps API Key to Advanced Custom Fields
 if (defined('GOOGLE_API_KEY')) {
-    function acf_google_map_key()
-    {
+    add_action('acf/init', function () {
         acf_update_setting('google_api_key', GOOGLE_API_KEY);
-    }
+    });
 }
-
-add_action('acf/init', 'acf_google_map_key');
 
 // Remove the Admin Bar because it's annoying :)
 add_filter('show_admin_bar', '__return_false');
