@@ -1,0 +1,13 @@
+@each $key, $value in $fontScale {
+	.text-#{$key} {
+		font-size: $value;
+	}
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}

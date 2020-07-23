@@ -1,0 +1,50 @@
+$colors: (
+	'brand': #00adf5,
+	'brand-700': #3fc6ff,
+	'brand-500': #6cd3ff,
+	'brand-300': #9fe2ff,
+	'brand-100': #d9f4ff,
+	'grey': #181a1a,
+	'grey-700': #414848,
+	'grey-500': #808b8b,
+	'grey-300': #c2cece,
+	'grey-100': #edf2f2,
+	'white': white,
+	'black': #121313,
+	'negative': #d00d0a,
+	'positive': #3bad61,
+	'warning': #d3d33b,
+	'neutral': #1a2683,
+	'twitter': #1da1f2,
+	'instagram': #f56040
+);
+
+$fonts: (
+	'base':
+		'aaux-next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol'
+);
+
+$sizeScale: (
+	1: 0.25rem,
+	2: 0.5rem,
+	3: 1rem,
+	4: 1.5rem,
+	5: 2.25rem,
+	6: 3rem,
+	7: 4rem,
+	8: 5rem,
+	9: 6rem,
+	10: 8rem
+);
+
+$fontScale: (
+	'-2': var(--step--2),
+	'-1': var(--step--1),
+	0: var(--step-0),
+	1: var(--step-1),
+	2: var(--step-2),
+	3: var(--step-3),
+	4: var(--step-4),
+	5: var(--step-5),
+	6: var(--step-6)
+);

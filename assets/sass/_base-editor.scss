@@ -1,0 +1,83 @@
+$prefix: '.editor-styles-wrapper';
+
+:root {
+	@each $key, $value in $colors {
+		--color-#{$key}: #{$value};
+	}
+
+	@each $key, $value in $fonts {
+		--font-#{$key}: #{unquote($value)};
+	}
+
+	@each $key, $value in $sizeScale {
+		--size-#{$key}: #{$value};
+	}
+}
+
+#{$prefix} {
+	color: var(--color-black);
+	font-family: var(--font-base) !important;
+	font-size: var(--step-0);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default padding */
+#{$prefix} ul[class],
+#{$prefix} ol[class] {
+	padding: 0;
+}
+
+/* Remove default margin */
+#{$prefix} h1,
+#{$prefix} h2,
+#{$prefix} h3,
+#{$prefix} h4,
+#{$prefix} p,
+#{$prefix} li,
+#{$prefix} figure,
+#{$prefix} figcaption,
+#{$prefix} blockquote,
+#{$prefix} dl,
+#{$prefix} dd {
+	margin: 0;
+}
+
+#{$prefix} h1,
+#{$prefix} h2,
+#{$prefix} h3,
+#{$prefix} h4,
+#{$prefix} .h1,
+#{$prefix} .h2,
+#{$prefix} .h3,
+#{$prefix} .h4 {
+	font-family: var(--font-heading, var(--font-base));
+	font-weight: 700;
+	line-height: 1;
+	margin: 0;
+}
+
+#{$prefix} h1,
+#{$prefix} .h1 {
+	font-size: var(--step-5);
+}
+
+#{$prefix} h2,
+#{$prefix} .h2 {
+	font-size: var(--step-4);
+}
+
+#{$prefix} h3,
+#{$prefix} .h3 {
+	font-size: var(--step-3);
+}
+
+#{$prefix} h4,
+#{$prefix} .h4 {
+	font-size: var(--step-2);
+}

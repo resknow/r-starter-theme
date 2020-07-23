@@ -1,0 +1,9 @@
+@use "tokens/tokens" as *;
+
+@function auto-color($color) {
+	@if (lightness($color) >= 61) {
+		@return var(--color-grey);
+	} @else {
+		@return var(--color-white);
+	}
+}

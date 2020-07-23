@@ -1,0 +1,23 @@
+{% extends "layouts/default.twig" %}
+
+{% block body %}
+
+    <section class="blocks news container container--sm flow flow--loose">
+        {% for post in posts %}
+        <article class="post">
+
+            {% if post.image %}
+            <div class="post__image">
+                <img src="{{ post.image.sizes.large }}" loading="lazy">
+            </div>
+            {% endif %}
+
+            <div class="post__content flow flow--tight">
+                <h2 class="post__title"><a href="{{ post.link }}">{{ post.title }}</a></h2>
+                <p>{{ post.excerpt }}</p>
+            </div>
+        </article>
+        {% endfor %}
+    </section>
+
+{% endblock %}

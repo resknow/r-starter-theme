@@ -1,0 +1,8 @@
+{# Example Block #}
+<section class="cta | block-align-{{ block.align }} align-center bg-brand c-white">
+    <p class="text-1">{{ fields.text }}</p>
+
+    {% if fields.link and fields.button_text %}
+    <a class="btn btn--white | gap-top-2" href="{{ fields.link }}">{{ fields.button_text }}</a>
+    {% endif %}
+</section>

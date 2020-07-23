@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="{{ assets_dir('images/favicon.png') }}">
+
+    {{ timber.wp_head }}
+
+</head>
+<body class="{{ timber.body_class }}">
+
+    <div class="browser-message">
+        <div class="container | flow flow--tight">
+            <h2>Your web browser is out of date</h2>
+            <p>This website has been developed using modern web technologies. The web browser you're currently using is outdated and may not support such technologies and as such your experience on this website may be degraded.</p>
+            <p><a class="btn btn--positive" href="https://browsehappy.com/" target="_blank">See your options</a></p>
+        </div>
+    </div>
+
+    <nav id="menu" class="mobile-nav | bg-white text-1">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/products/">Products</a></li>
+            <li><a href="{{ fn('get_permalink', 259) }}">PPE</a></li>
+            <li><a href="/gallery/">Gallery</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+    </nav>

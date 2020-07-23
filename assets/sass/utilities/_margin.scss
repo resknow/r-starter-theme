@@ -1,0 +1,9 @@
+@each $key, $value in $sizeScale {
+	.gap-top-#{$key} {
+		margin-block-start: $value;
+	}
+
+	.gap-bottom-#{$key} {
+		margin-block-end: $value;
+	}
+}

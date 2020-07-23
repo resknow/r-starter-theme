@@ -1,0 +1,11 @@
+@each $key, $value in $colors {
+	.bg-#{$key} {
+		background-color: $value;
+	}
+}
+
+.bg-cover {
+	background-image: var(--image);
+	background-size: cover;
+	background-position: center;
+}

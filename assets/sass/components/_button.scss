@@ -1,0 +1,42 @@
+// Button Sizes
+// Padding values
+$buttonSizes: (
+	"sm": 0.35rem 1.9rem,
+	"md": 0.62rem 2.4rem,
+	"lg": 0.8rem 3rem
+);
+
+/* Buttons */
+.btn {
+	appearance: none;
+	border: none;
+	border-radius: 99rem;
+	background-color: var(--color-grey);
+	box-shadow: 0.05rem 0.05rem 0.2rem rgba(map-get($colors, "grey"), 0.1);
+	color: white;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.62rem 2.4rem;
+	text-decoration: none;
+	transition: box-shadow 0.3s;
+	min-width: 6rem;
+
+	&:hover {
+		box-shadow: 0.2rem 0.2rem 0.4rem rgba(map-get($colors, "grey"), 0.2);
+	}
+}
+
+@each $key, $value in $buttonSizes {
+	.btn--#{$key} {
+		padding: $value;
+	}
+}
+
+@each $key, $value in $colors {
+	.btn--#{$key} {
+		background-color: var(--color-#{$key});
+		color: auto-color($value);
+	}
+}

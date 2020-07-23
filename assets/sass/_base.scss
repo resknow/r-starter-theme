@@ -1,0 +1,214 @@
+:root {
+	@each $key, $value in $colors {
+		--color-#{$key}: #{$value};
+	}
+
+	@each $key, $value in $fonts {
+		--font-#{$key}: #{unquote($value)};
+	}
+
+	@each $key, $value in $sizeScale {
+		--size-#{$key}: #{$value};
+	}
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Set core body defaults */
+body {
+	color: var(--color-black);
+	font-family: var(--font-base);
+	font-size: var(--step-0);
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+a[class] {
+	text-decoration: none;
+}
+
+/* Make images easier to work with */
+img {
+	height: auto;
+	max-width: 100%;
+	display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+	--flow-space: var(--size-3);
+	margin-top: var(--flow-space);
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Disabled Element */
+[disabled] {
+	cursor: not-allowed;
+	opacity: 0.8;
+}
+
+/* Hidden Element */
+[hidden] {
+	display: none !important;
+}
+
+/* Accessible hidden elements, good for labels and such */
+.visually-hidden {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Hide outdated message on modern browsers */
+@supports (display: grid) {
+	.browser-message {
+		display: none;
+	}
+}
+
+/* Sensible SVG default width */
+svg {
+	fill: currentColor;
+	width: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+	font-family: var(--font-heading, var(--font-base));
+	font-weight: 700;
+	line-height: 1;
+	margin: 0;
+}
+
+h1,
+.h1 {
+	font-size: var(--step-5);
+}
+
+h2,
+.h2 {
+	font-size: var(--step-4);
+}
+
+h3,
+.h3 {
+	font-size: var(--step-3);
+}
+
+h4,
+.h4 {
+	font-size: var(--step-2);
+}
+
+.error-404 {
+	background-color: var(--color-grey);
+	color: white;
+	display: grid;
+	grid-template-rows: 40% 1fr;
+	gap: 32px;
+	height: 100vh;
+}
+
+.error-404__content {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 36px;
+}
+
+@media (min-width: 768px) {
+	.error-404 {
+		grid-template-columns: 40% 1fr;
+		grid-template-rows: auto;
+	}
+
+	.error-404__content {
+		grid-column: 2;
+		grid-row: 1;
+		padding: 60px;
+	}
+
+	.error-404__content img {
+		max-width: 100px;
+		height: auto;
+	}
+
+	.error-404__content h1 {
+		margin-top: 24px;
+	}
+
+	.error-404__content p {
+		margin: 0;
+		margin-top: 12px;
+	}
+
+	.error-404__image img {
+		clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
+		grid-column: 1;
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+		height: 100vh;
+	}
+}

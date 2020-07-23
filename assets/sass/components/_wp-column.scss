@@ -1,0 +1,17 @@
+.wp-block-columns {
+	display: grid;
+	grid-row-gap: var(--size-4);
+	margin-block-end: 0;
+}
+
+.wp-block-column > * + * {
+	--flow-space: var(--size-4);
+	margin-top: var(--flow-space);
+}
+
+@media (min-width: 42em) {
+	.wp-block-columns {
+		grid-template-columns: 2fr 1fr;
+		grid-column-gap: var(--size-6);
+	}
+}

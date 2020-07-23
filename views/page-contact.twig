@@ -1,0 +1,32 @@
+{% extends "layouts/default.twig" %}
+
+{% block body %}
+
+    <section class="blocks">
+        {{ this.content }}
+
+        <div class="auto-grid | alignwide">
+            <div>
+                <strong class="c-grey-500">Phone</strong>
+                <p class="font-heading text-3 weight-bold"><a class="c-brand" href="tel:{{ globals.phone }}">{{ globals.phone }}</a></p>
+            </div>
+            <div>
+                <strong class="c-grey-500">E-mail</strong>
+                <p class="font-heading text-3 weight-bold">{{ globals.email }}</p>
+            </div>
+            <div>
+                <strong class="c-grey-500">Address</strong>
+                <p class="font-heading">{{ globals.address }}</p>
+            </div>
+        </div>
+
+        <div>
+            {{ function('do_shortcode', '[contact-form-7 id="5"]') }}
+        </div>
+
+        <div class="alignfull">
+            <google-map lat="{{ globals.location.lat }}" lng="{{ globals.location.lng }}" zoom="15"></google-map>
+        </div>
+    </section>
+
+{% endblock %}

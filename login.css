@@ -1,0 +1,72 @@
+html {
+	--font-body: sans-serif;
+	--font-size: calc(11px + 1vw);
+	--font-weight: 400;
+
+	--color-brand: #00adf5;
+	--color-brand-rgb: 0, 108, 184;
+	--color-accent: #9fe2ff;
+	--color-accent-rgb: 0, 174, 232;
+
+	--color-primary: #4a4c50;
+	--color-secondary: #81858b;
+	--color-faded-grey: #f2f3f5;
+	--color-light-grey: #cdd0d6;
+	--color-dark-grey: #27282a;
+	--color-neutral: #2c7285;
+	--color-negative: #db2727;
+	--color-positive: #32c174;
+}
+
+body {
+	background-image: linear-gradient(
+		to bottom right,
+		var(--color-brand),
+		var(--color-accent)
+	) !important;
+	background-size: cover !important;
+	background-position: center !important;
+}
+
+.login h1 a {
+	background-image: url('/wp-content/themes/fast-shield/assets/images/logo.png') !important;
+	background-size: 100%;
+	height: 65px;
+	width: 200px;
+}
+
+a {
+	color: var(--color-neutral);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.login #nav {
+	text-align: center;
+}
+
+.login #nav a,
+.login #backtoblog a {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.login #nav a:hover,
+.login #backtoblog a:hover {
+	color: white;
+}
+
+.login form {
+	box-shadow: 4px 4px 32px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 4px 1px 32px rgba(0, 0, 0, 0.4);
+	border-radius: 4px;
+}
+
+#backtoblog {
+	font-weight: 700;
+	font-size: 14px !important;
+	position: absolute;
+	bottom: 24px;
+	left: 24px;
+}

@@ -1,0 +1,29 @@
+:root {
+    --editor-sidebar-width: 380px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+.postbox .inside h2,
+.wrap [class$='icon32'] + h2,
+.wrap h1,
+.wrap > h2:first-child {
+    font-weight: 700;
+}
+
+/* Gutenberg Editor Changes */
+.edit-post-layout.is-sidebar-opened .edit-post-plugin-sidebar__sidebar-layout,
+.edit-post-layout.is-sidebar-opened .edit-post-sidebar {
+    width: var(--editor-sidebar-width);
+}
+
+.edit-post-layout.is-sidebar-opened .edit-post-layout__content {
+    margin-right: var(--editor-sidebar-width);
+}
