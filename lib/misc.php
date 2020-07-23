@@ -22,9 +22,11 @@ function dd($input)
 }
 
 // Add Google Maps API Key to Advanced Custom Fields
-function acf_google_map_key()
-{
-    acf_update_setting('google_api_key', 'AIzaSyAeP_G3ffklPHmkCIdhkVGq0GtzhusHHls');
+if (defined('GOOGLE_API_KEY')) {
+    function acf_google_map_key()
+    {
+        acf_update_setting('google_api_key', GOOGLE_API_KEY);
+    }
 }
 
 add_action('acf/init', 'acf_google_map_key');
