@@ -6,6 +6,9 @@
  * @author Chris Galbraith
  */
 
+// Environment Checks
+require_once __DIR__ . '/lib/env.php';
+
 // Theme Setup
 require_once __DIR__ . '/lib/setup.php';
 
